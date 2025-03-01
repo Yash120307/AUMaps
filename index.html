@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AU Maps</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="https://i.postimg.cc/zvSfLhh9/Au-logo.jpg" alt="Logo" class="logo">
+            <div class="heading-container">
+                <h2 class="maps-heading">AU MAPS</h2>
+                <p class="guide-text">Guide to Navigate</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="room-search">
+            <input type="text" id="roomInput" placeholder="Enter room number or name">
+            <button onclick="searchRoom()">Search</button>
+        </div>
+        <div class="blocks">
+            <div class="block" onmouseover="showDetails('A')" onclick="showMap('A')">A BLOCK
+                <div class="details" id="details-A">
+                    <ul>
+                        <li onclick="event.stopPropagation()">Classrooms</li>
+                        <li onclick="event.stopPropagation()">Lab</li>
+                        <li onclick="event.stopPropagation()">Office</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="block" onmouseover="showDetails('B')" onclick="showMap('B')">B BLOCK
+                <div class="details" id="details-B">
+                    <ul>
+                        <li onclick="event.stopPropagation()">Auditoriums</li>
+                        <li onclick="event.stopPropagation()">Classrooms</li>
+                        <li onclick="event.stopPropagation()">Pharmacy Labs</li>
+                        <li onclick="event.stopPropagation()">Readers</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="block" onmouseover="showDetails('C')" onclick="showMap('C')">C BLOCK
+                <div class="details" id="details-C">
+                    <ul>
+                        <li onclick="event.stopPropagation()">Auditoriums</li>
+                        <li onclick="event.stopPropagation()">Civil Labs</li>
+                        <li onclick="event.stopPropagation()">Classrooms</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="block" onmouseover="showDetails('D')" onclick="showMap('D')">D BLOCK
+                <div class="details" id="details-D">
+                    <ul>
+                        <li onclick="event.stopPropagation()">Auditoriums</li>
+                        <li onclick="event.stopPropagation()">Classrooms</li>
+                        <li onclick="event.stopPropagation()">Labs</li>
+                        <li onclick="event.stopPropagation()">Offices</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="block" onmouseover="showDetails('E')" onclick="showMap('E')">E BLOCK
+                <div class="details" id="details-E">
+                    <ul>
+                        <li onclick="event.stopPropagation()">Auditoriums</li>
+                        <li onclick="event.stopPropagation()">Classrooms</li>
+                        <li onclick="event.stopPropagation()">Labs</li>
+                        <li onclick="event.stopPropagation()">Offices</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="block" onmouseover="showDetails('F')" onclick="showMap('F')">F BLOCK
+                <div class="details" id="details-F">
+                    <ul>
+                        <li onclick="event.stopPropagation()">Offices</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="block" onmouseover="showDetails('G')" onclick="showMap('G')">G BLOCK
+                <div class="details" id="details-G">
+                    <ul>
+                        <li onmouseover="showSubDetails('libraries')" onclick="event.stopPropagation()">Libraries
+                            <ul class="sub-details" id="sub-details-libraries">
+                                <li onclick="event.stopPropagation()">Central Library</li>
+                                <li onclick="event.stopPropagation()">Digital Library</li>
+                                <li onclick="event.stopPropagation()">Reference Books</li>
+                            </ul>
+                        </li>
+                        <li onclick="event.stopPropagation()">Offices</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="block" onmouseover="showDetails('H')" onclick="showMap('H')">H BLOCK
+                <div class="details" id="details-H">
+                    <ul>
+                        <li onclick="event.stopPropagation()">Classrooms</li>
+                        <li onclick="event.stopPropagation()">Labs</li>
+                        <li onclick="event.stopPropagation()">Seminar Halls</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="block" onmouseover="showDetails('CANTEENS')" onclick="showMap('CANTEENS')">CANTEENS
+                <div class="details" id="details-CANTEENS">
+                    <ul>
+                        <li onclick="showMap('APJ')">APJ Abdul Kalam Hall</li>
+                        <li onclick="showMap('Mithrama')">Mithrama Canteen</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="map" id="map">
+            <img src="https://allegiance-educare.in/storage/uploads/colleges/1660634891Screenshot%202022-08-16%20125248.jpg" alt="Default Map Image" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+    </main>
+</body>
